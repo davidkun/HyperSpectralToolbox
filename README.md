@@ -16,3 +16,18 @@ Under GNU General Public License version 2.0 (GPLv2).
 
 Site: http://sourceforge.net/apps/mediawiki/matlabhyperspec/index.php?title=Main_Page
 
+### Algorithms to be added:
+
+
+- (Joint) Affine Matched filter
+- Generalization of matched filter which includes signature statistics
+- RAF-SAM, an improvement to SAM from: Improving the Classification Precision of Spectral Angle Mapper
+- ELM for radiance to reflectance conversion (http://www.cis.rit.edu/files/197_SPIE_2005_Grimm.pdf)
+- Covariance matrix inversion methods (e.g. Dominant Mode Rejection)
+- Quadratic Detector
+- SMACC
+- AMEE
+- NFINDR
+- Antonia Plaza's FastPPI
+- Joshua Broaderwater's hybrid detectors (HUD, etc)
+- Variations on ACE - e.g. adaptive covariance estimated ACE, etc
