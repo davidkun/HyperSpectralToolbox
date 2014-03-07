@@ -1,9 +1,13 @@
 # HyperSpectral Matlab Toolbox #
 
-Originally writted by Isaac Gerg. (Under GNU General Public License version 2.0 (GPLv2).)
+Originally writted by [Isaac Gerg](http://www.gergltd.com/home/). (Under GNU General Public License version 2.0 (GPLv2).)
+[Visit original site](http://sourceforge.net/apps/mediawiki/matlabhyperspec/index.php?title=Main_Page)
 
-Site: http://sourceforge.net/apps/mediawiki/matlabhyperspec/index.php?title=Main_Page
+## Dependencies ##
 
+- FastICA ([from my Github repo](https://github.com/davidkun/FastICA) or [from Aalto University](http://research.ics.aalto.fi/ica/fastica/code/dlcode.shtml))
+
+## Description ##
 
 The open source Matlab Hyperspectral Toolbox is a matlab toolbox containing various hyperspectral exploitation algorithms. The toolbox is meant to be a concise repository of current state-of-the-art exploitation algorithms for learning and research purposes. The toolbox includes functions for:
 
