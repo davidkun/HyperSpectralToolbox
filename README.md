@@ -24,7 +24,7 @@ The open source Matlab Hyperspectral Toolbox is a matlab toolbox containing vari
 
 - Material abundance map (MAM) generation
 
-- Spectral Unmixing
+- Spectral Comparison
   - Spectral angle mapper (SAM)
   - Spectral information divergence (SID)
   - Normalize cross correlation
