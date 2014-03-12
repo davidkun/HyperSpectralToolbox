@@ -9,13 +9,13 @@ referring to the data in a space or a matrix of pixels when referring to
 data as an image. 
   For consistency, a common notation is defined to 
 differentiate these concepts clearly. Hyperspectral data examined like an 
-image will be defined as a matrix Mm×n×p of dimension m × n × p where m 
+image will be defined as a matrix Mmï¿½nï¿½p of dimension m ï¿½ n ï¿½ p where m 
 is defined as the number of rows in the image, n is defined as the 
 number of columns in the image, and p is defined as the number of bands 
 in the image. Therefore, a single element of such an image will be 
 accessed using Mi,j,k and a single pixel of an image will be accessed 
 using Mi,j,: Hyperspectral data formed as a vector of vectors 
-(i.e. 2D matrix) is defined as M(m·n)×p of dimension (m· n)×p. 
+(i.e. 2D matrix) is defined as M(mï¿½n)ï¿½p of dimension (mï¿½ n)ï¿½p. 
 A single element is accessed using Mi,j and a single pixel is 
 accessed using M:,j . Notice the multi-element notation is consistent 
 with MatlabTM this is intentional.
@@ -23,9 +23,9 @@ with MatlabTM this is intentional.
 throughout this code.
 
 M Data matrix. Defined as an image of spectral signatures or vectors:
-  Mm×n×p. Or, defined as a long vector of spectral signatures:
-  M(m·n)×p.
-N The total number of pixels. For example N = m · n.
+  Mmï¿½nï¿½p. Or, defined as a long vector of spectral signatures:
+  M(mï¿½n)ï¿½p.
+N The total number of pixels. For example N = m ï¿½ n.
 m Number of rows in the image.
 n Number of columns in the image.
 p Number of bands.
