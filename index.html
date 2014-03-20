@@ -1,0 +1,155 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Hyperspectraltoolbox</title>
+  <meta name="description" content="HyperSpectral Matlab Toolbox forked from Sourceforge">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Hyperspectraltoolbox</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">HyperSpectral Matlab Toolbox forked from Sourceforge</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/davidkun/HyperSpectralToolbox/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/davidkun/HyperSpectralToolbox/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/davidkun/HyperSpectralToolbox" class="code">View Hyperspectraltoolbox on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a name="hyperspectral-matlab-toolbox" class="anchor" href="#hyperspectral-matlab-toolbox"><span class="octicon octicon-link"></span></a>HyperSpectral Matlab Toolbox</h1>
+
+<p>Originally writted by <a href="http://www.gergltd.com/home/">Isaac Gerg</a>. (Under GNU General Public License version 2.0 (GPLv2).)
+<a href="http://sourceforge.net/apps/mediawiki/matlabhyperspec/index.php?title=Main_Page">Visit original site</a></p>
+
+<h2>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<ul>
+<li>FastICA (<a href="https://github.com/davidkun/FastICA">from my Github repo</a> or <a href="http://research.ics.aalto.fi/ica/fastica/code/dlcode.shtml">from Aalto University</a>)</li>
+</ul><h2>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Description</h2>
+
+<p>The open source Matlab Hyperspectral Toolbox is a matlab toolbox containing various hyperspectral exploitation algorithms. The toolbox is meant to be a concise repository of current state-of-the-art exploitation algorithms for learning and research purposes. The toolbox includes functions for:</p>
+
+<ul>
+<li>
+<p>Target detection</p>
+
+<ul>
+<li>Constrained Energy Minimization (CEM)</li>
+<li>Orthogonal Subspace Projection (OSP)</li>
+<li>Generalized Liklihood Ratio Test (GLRT)</li>
+<li>Adaptive Cosine/Coherent Estimator (ACE)</li>
+<li>Adaptive Matched Subspace Detector (AMSD)</li>
+</ul>
+</li>
+<li>
+<p>Endmember Finders</p>
+
+<ul>
+<li>Automatic Target Generation Procedure (ATGP)</li>
+<li>Independent component analysis - endmember extraction algorithm (ICA-EEA)</li>
+</ul>
+</li>
+<li><p>Material abundance map (MAM) generation</p></li>
+<li>
+<p>Spectral Comparison</p>
+
+<ul>
+<li>Spectral angle mapper (SAM)</li>
+<li>Spectral information divergence (SID)</li>
+<li>Normalize cross correlation</li>
+</ul>
+</li>
+<li>
+<p>Anomaly Detectors</p>
+
+<ul>
+<li>Reed-Xiaoli Detector (RX)</li>
+</ul>
+</li>
+<li>
+<p>Least Square Solvers (for abundance map estimation)</p>
+
+<ul>
+<li>Fully-constrained least squares (FCLS)</li>
+<li>Non negative least squares (NNLS)</li>
+</ul>
+</li>
+<li>
+<p>Material Count Estimation</p>
+
+<ul>
+<li>HFC virtual dimensionality (VD) for material count estimate</li>
+</ul>
+</li>
+<li><p>Automated processing</p></li>
+<li>Change detection</li>
+<li>Visualization</li>
+<li>Reading / writing files (.rfl, .asd, ect)</li>
+</ul><h3>
+<a name="algorithms-to-be-added-requested-by-dr-gerg" class="anchor" href="#algorithms-to-be-added-requested-by-dr-gerg"><span class="octicon octicon-link"></span></a>Algorithms to be added (requested by Dr. Gerg):</h3>
+
+<ul>
+<li>(Joint) Affine Matched filter</li>
+<li>Generalization of matched filter which includes signature statistics</li>
+<li>RAF-SAM, an improvement to SAM from: Improving the Classification Precision of Spectral Angle Mapper</li>
+<li>ELM for radiance to reflectance conversion - <a href="http://www.cis.rit.edu/files/197_SPIE_2005_Grimm.pdf">http://www.cis.rit.edu/files/197_SPIE_2005_Grimm.pdf</a>
+</li>
+<li>Covariance matrix inversion methods (e.g. Dominant Mode Rejection)</li>
+<li>Quadratic Detector</li>
+<li>SMACC - <a href="http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=844250">http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=844250</a>
+</li>
+<li>AMEE - <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1046852">http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1046852</a>
+</li>
+<li>N-FINDR - <a href="http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=994814">http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=994814</a>
+</li>
+<li>Fast PPI - <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1576691">http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1576691</a>
+</li>
+<li>Joshua Broaderwater's hybrid detectors (HUD, etc)</li>
+<li>Variations on ACE - e.g. adaptive covariance estimated ACE, etc</li>
+</ul><hr><p><a href="http://davidkun.github.io/">Back to my Homepage</a></p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/davidkun" class="avatar"><img src="https://avatars1.githubusercontent.com/u/2375234?s=60" width="48" height="48"/></a> <a href="https://github.com/davidkun">davidkun</a> maintains <a href="https://github.com/davidkun/HyperSpectralToolbox">Hyperspectraltoolbox</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/davidkun/HyperSpectralToolbox/tarball/master" class="tar">tar</a><a href="https://github.com/davidkun/HyperSpectralToolbox/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
