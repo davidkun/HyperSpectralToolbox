@@ -11,16 +11,16 @@ Originally writted by [Isaac Gerg](http://www.gergltd.com/home/). (Under GNU Gen
 
 The open source Matlab Hyperspectral Toolbox is a matlab toolbox containing various hyperspectral exploitation algorithms. The toolbox is meant to be a concise repository of current state-of-the-art exploitation algorithms for learning and research purposes. The toolbox includes functions for:
 
-- Target detection
+- Target Detection
   - Constrained Energy Minimization (CEM)
   - Orthogonal Subspace Projection (OSP)
   - Generalized Liklihood Ratio Test (GLRT)
   - Adaptive Cosine/Coherent Estimator (ACE)
   - Adaptive Matched Subspace Detector (AMSD)
-- Endmember Finders
+- Endmember Determination
   - Automatic Target Generation Procedure (ATGP)
   - Independent component analysis - endmember extraction algorithm (ICA-EEA)
-- Material abundance map (MAM) generation
+- Material Abundance Map (MAM) Generation
 - Spectral Comparison
   - Spectral angle mapper (SAM)
   - Spectral information divergence (SID)
@@ -32,10 +32,10 @@ The open source Matlab Hyperspectral Toolbox is a matlab toolbox containing vari
   - Non negative least squares (NNLS)
 - Material Count Estimation
   - HFC virtual dimensionality (VD) for material count estimate
-- Automated processing
-- Change detection
+- Automated Processing
+- Change Detection
 - Visualization
-- Reading / writing files (.rfl, .asd, ect)
+- Reading / Writing Files (.rfl, .asd, ect)
 
 ### Algorithms to be added (suggested by Dr. Gerg): ###
 
