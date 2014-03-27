@@ -41,7 +41,7 @@ The open source Matlab Hyperspectral Toolbox is a matlab toolbox containing vari
 
 - (Joint) Affine Matched filter
 - Generalization of matched filter which includes signature statistics
-- RAF-SAM, an improvement to SAM from: Improving the Classification Precision of Spectral Angle Mapper
+- RAF-SAM, an improvement to SAM - http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=793174
 - ELM for radiance to reflectance conversion - http://www.cis.rit.edu/files/197_SPIE_2005_Grimm.pdf
 - Covariance matrix inversion methods (e.g. Dominant Mode Rejection)
 - Quadratic Detector
@@ -49,5 +49,5 @@ The open source Matlab Hyperspectral Toolbox is a matlab toolbox containing vari
 - AMEE - http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1046852
 - N-FINDR - http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=994814
 - Fast PPI - http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1576691
-- Joshua Broaderwater's hybrid detectors (HUD, etc)
+- Joshua Broaderwater's hybrid detectors (HUD, etc) - http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=4302756
 - Variations on ACE - e.g. adaptive covariance estimated ACE, etc
