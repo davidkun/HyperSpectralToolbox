@@ -1,17 +1,22 @@
-function [results] = hyperNfindr(M, B, S)
-% HYPERNFINDR Performs the hybrid unstructured detector (HUD) algorithm
-%   Performs the hybrid unstructured detector algorithm for target
-% detection.
+function [ U, X, n ] = hyperNfindr( M, q, U_init )
+% HYPERNFINDR Performs the N-FINDR (endmember extraction) algorithm
+%   Performs the N-FINDR algorithm to generate abundance maps
+% and find the purest pixels.  This function utilizes FastICA.
 %
 % Usage
-%   [results] = hyperHud(M, B, S)
+%   [ U, X, n ] = hyperNfindr( M, q, U_init )
 % Inputs
-%   M - 2d matrix of HSI data (p x N)
-%   B - 2d matrix of background endmembers (p x q)
-%   S - 2d matrix of target endmembers (p x #target_sigs)
+%   M - HSI data in 2D (p x N)
+%   q - Number of materials to unmix
+%   U_init - Initia l endmembers (p x #)
 % Outputs
-%   results - vector of detector output (N x 1)
+%   U - matrix of recovered endmembers (p x q)
+%   X - material abundance maps (q x N)
+%   n - (optional) Indicies of recovered endmembers (q x 1)
 %
 % References
-%   J Broadwater & R Chellappa.  "Hybrid Detectors for Subpixel Targets."
-% IEEE PAMI. Vol 29. No 11. November 2007.
+%   M. Winter, "N-findr: an algorithm for fast autonomous 
+% spectral endmember determination in hyperspectral data," SPIE’s 
+% International Symposium on Optical Science, Engineering, and 
+% Instrumentation, pages 266–275. International Society for Optics 
+% and Photonics, 1999.
