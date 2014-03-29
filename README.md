@@ -49,5 +49,5 @@ The open source Matlab Hyperspectral Toolbox is a matlab toolbox containing vari
 - AMEE - http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1046852
 - N-FINDR - http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=994814
 - Fast PPI - http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1576691
-- Joshua Broaderwater's hybrid detectors (HUD, etc) - http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=4302756
+- ~~Joshua Broaderwater's hybrid detectors (HUD, etc)~~
 - Variations on ACE - e.g. adaptive covariance estimated ACE, etc
