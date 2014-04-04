@@ -1,7 +1,7 @@
 function [ U, X, n ] = hyperAmee( M, q, U_init )
 % HYPERAMEE Performs the AMEE algorithm
 %   Performs the  Automated Morphological Endmember Extraction (AMEE) 
-% algorithm performs unsupervised pixel purity determination and 
+% algorithm; performs unsupervised pixel purity determination and 
 % endmember extraction. This function utilizes FastICA.
 %
 % Usage
