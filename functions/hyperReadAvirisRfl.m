@@ -29,7 +29,7 @@ function [ M, wavelengths_nm ] = hyperReadAvirisRfl(filename, height, width, ban
 %             bytes per line. 
 %
 % Example:
-% [img, lambda]= readAviris('f970620t01p02_r03_sc02.a.rfl',  [1 100], [1 614], [1 224]);
+% [img, lambda]= readAvirisRfl('f970620t01p02_r03_sc02.a.rfl',  [1 100], [1 614], [1 224]);
 % Reads in all bands and rows of reflectance data from scanlines 1 to 100.
 %
 % Copyright (C) 2007 Isaac Gerg. All rights reserved.
