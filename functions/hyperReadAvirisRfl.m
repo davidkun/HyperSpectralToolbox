@@ -35,7 +35,7 @@ function [ M, wavelengths_nm ] = hyperReadAvirisRfl(filename, height, width, ban
 % Copyright (C) 2007 Isaac Gerg. All rights reserved.
 
 % Extract root filename.
-[shortFilename, pth] = findLast(filename, '\');
+[shortFilename, pth] = findLast(filename, filesep);
 if (pth > 1)
     filePath = filename(1:pth);
 else
