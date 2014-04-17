@@ -1,4 +1,4 @@
-function [M, A, noiseFractions] = hyperNacp(M, h, w)
+function [M, A, noiseFractions] = hyperMnf(M, h, w)
 % HYPERMNF Performs the maximum noise fraction (MNF) transform.
 %  hyperMnf performs the maximum noise fraction (MNF) transform on the 
 % data and uses spatial (row) offsets of the data to estimate the 
