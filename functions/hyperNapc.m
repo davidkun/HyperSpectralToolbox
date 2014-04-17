@@ -1,6 +1,6 @@
 function [M, H, noiseFractions] = hyperNacp(M, h, w)
-% HYPERMNF Performs the noise adjusted principal component transform (NACP)
-%  hyperMnf performs the noise adjust principal component transform on the 
+% HYPERNAPC Performs the noise adjusted principal component transform (NACP)
+%  hyperNacp performs the noise adjust principal component transform on the 
 % data and uses spatial (row) offsets of the data to estimate the 
 % covariance matrix of the data.
 %
