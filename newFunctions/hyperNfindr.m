@@ -1,19 +1,18 @@
 function [U] = hyperNfindr(M, q)
 % HYPERNFINDR Performs the N-FINDR (endmember extraction) algorithm
-%   Performs the N-FINDR algorithm to find the purest pixels
-% and generate abundance maps.
+%   Performs the N-FINDR algorithm to find the q endmembers. If only M
+%  is given as input, this function calls hyperHfcVd to estimate the 
+%  number of endmembers (q) and then PCA to reduce dimensionality to (q-1).
 %
 % Usage
 %   [U] = hyperNfindr(M)
 %   [U] = hyperNfindr(M, q)
 % Inputs
 %   M - 2d matrix of HSI data (p x N)
-%   q - Number of endmembers to find (if not given, default q equals p-1)
+%   q - Number of endmembers to find
+%       -- if not given, q is obtained from hyperHfcVd(M, 10^-3)
 % Outputs
 %   U - Recovered endmembers (p x N)
-%
-% If only M is given as input, this function calls hyperHfcVd to estimate
-%  the number of endmembers (q) and then PCA to reduce dimensionality to (q-1).
 % 
 % References
 %   M. Winter, "N-findr: an algorithm for fast autonomous 
