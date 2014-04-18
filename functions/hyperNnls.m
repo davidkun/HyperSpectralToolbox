@@ -20,7 +20,7 @@ if (ndims(M) ~= 2)
     error('M must be a p x N matrix.');
 end
 if (ndims(U) ~= 2)
-    error('M must be a p x q matrix.');
+    error('U must be a p x q matrix.');
 end
 
 [p1, N] = size(M);
