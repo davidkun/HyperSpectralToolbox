@@ -1,8 +1,8 @@
 function [U] = hyperNfindr(M, q)
 % HYPERNFINDR Performs the N-FINDR (endmember extraction) algorithm
-%   Performs the N-FINDR algorithm to find the q endmembers. If only M
-%  is given as input, this function calls hyperHfcVd to estimate the 
-%  number of endmembers (q) and then PCA to reduce dimensionality to (q-1).
+%   Performs the N-FINDR algorithm to find q endmembers. If only M is
+%  given as input, this function calls hyperHfcVd to estimate the number
+%  of endmembers (q) and then hyperPct to reduce dimensionality to (q-1).
 %
 % Usage
 %   [U] = hyperNfindr(M)
@@ -21,31 +21,40 @@ function [U] = hyperNfindr(M, q)
 % Instrumentation, pages 266–275. International Society for Optics 
 % and Photonics, 1999.
 
-[p, N] = size(M);
+% Error trapping
+if ndims(M) ~= 2
+    warning('WarnTests:dim', ...
+            'Input image must be p x N.\n',...
+            'Converting with hyperConvert2d.\n')
+    M = hyperConvert2d(M);
+end
+
 M_orig = M;
+[p, N] = size(M);
+
 if nargin == 1
     q = hyperHfcVd(M_orig, [10^-3]);
     M = hyperPct(M, q-1);
 elseif q < p+1
     M = hyperPct(M, q-1);
     warning('WarnTests:dim', ...
-    strcat('N-FINDR requires (q+1) spectral bands.',...
-           '\nPerforming PCA to reduce dimensionality.'))
+    strcat('N-FINDR requires (q+1) spectral bands.\n',...
+           'Performing PCA to reduce dimensionality.\n'))
 elseif q > p+1
     warning('WarnTests:dim', ...
-    strcat('N-FINDR requires (q+1) spectral bands.',...
-           '\nPerforming PCA to reduce dimensionality.'))
+    strcat('N-FINDR requires (q+1) spectral bands.\n',...
+           'Performing PCA to reduce dimensionality.\n'))
     error('ErrTests:dim', ...
         strcat('N-FINDR cannot find more than (p+1) endmembers (q),\n', ...
-               'where p is the number of available spectral bands.'))
+               'where p is the number of available spectral bands.\n'))
 end
 
 % Initialize
-M         = M*1e4;
-U_idx     = randperm(N,q);
-E         = M(:,U_idx);
-V         = abs(det([ones(1,q); E])) / factorial(q-1);
-vols      = zeros(q,1);
+M     = M*1e4;
+U_idx = randperm(N,q);
+E     = M(:,U_idx);
+V     = abs(det([ones(1,q); E])) / factorial(q-1);
+vols  = zeros(q,1);
 
 % Search for maximum volume
 for j = 1:N;
@@ -67,13 +76,3 @@ end
 
 % Return endmembers
 U = M_orig(:, U_idx);
-
-
-
-
-
-
-
-
-
-
