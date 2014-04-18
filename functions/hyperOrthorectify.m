@@ -22,7 +22,7 @@ x = tan(hpbw/2)*altitude;  % m
 gsd = altitude*radPerPix;  % m
 n = x/gsd;
 
-outImg = zeros(h, floor(n)*2, p);
+imgOut = zeros(h, floor(n)*2, p);
 for k=1:p
     for j=1:h
         for i=-floor(n):1:floor(n)-1
