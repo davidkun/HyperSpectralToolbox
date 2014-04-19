@@ -19,7 +19,7 @@ Open Matlab. The default directory should contain a file `startup.m`, if not cre
               '~/path-to-directory/HyperSpectralToolbox/functions', ...
               '~/path-to-directory/HyperSpectralToolbox/newFunctions');
 
-You're ready to go now!
+You're ready to go now! Check out the demo files `hyperDemo.m` in `functions/` and `hyperDemo2.m` in `newFunctions/` to learn how to use the toolbox.
 
 ### Description ###
 
@@ -61,7 +61,7 @@ The open source Matlab Hyperspectral Toolbox is a matlab toolbox containing vari
 - Quadratic Detector
 - SMACC - http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=844250
 - AMEE - http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1046852
-- N-FINDR - http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=994814
+- ~~N-FINDR - http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=994814~~
 - Fast PPI - http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1576691
 - ~~Joshua Broaderwater's hybrid detectors (HUD, etc)~~
 - Variations on ACE - e.g. adaptive covariance estimated ACE, etc
