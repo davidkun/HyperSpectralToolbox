@@ -22,12 +22,12 @@ end
 
 % Read in an HSI image and display one band
 bndnum  = 132; % Band Number
-slice   = hyperReadAvirisRfl(rflFile, [1 500], [1 614], [bndnum bndnum]);
+slice   = hyperReadAvirisRfl(rflFile, [400 500], [1 614], [bndnum bndnum]);
 figure; imagesc(slice); axis image; colormap(gray);
 title(strcat('Band ', num2str(bndnum)));
 
 %% Read part of AVIRIS reflectance data file that we will further process
-M = hyperReadAvirisRfl(rflFile, [1 500], [1 614], [1 224]);
+M = hyperReadAvirisRfl(rflFile, [400 500], [1 614], [1 224]);
 M = hyperNormalize(M);
 
 % Read AVIRIS .spc file
@@ -61,9 +61,11 @@ figure; plot(desiredLambdasNm(goodBands), Unfindr);
 title('N-FINDR Recovered Endmembers'); grid on;
 ylabel('Reflectance [0-1]'); xlabel('Wavelength [nm]');
 
-% AVMAX
-% U = hyperAvmax(hyperConvert2d(M), 50, 1000);
-% figure; plot(U); title('AVMAX Recovered Endmembers'); grid on;
+%% AVMAX
+Uavmax = hyperAvmax(hyperConvert2d(M), q);
+figure; plot(desiredLambdasNm(goodBands), Uavmax); 
+title('AVMAX Recovered Endmembers'); grid on;
+ylabel('Reflectance [0-1]'); xlabel('Wavelength [nm]');
 
 %% --------------------------------------------------------------------------
 % Perform a fully unsupervised exploitation chain using HFC, ATGP, and NNLS
