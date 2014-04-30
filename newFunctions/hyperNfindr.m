@@ -33,13 +33,15 @@ M_orig = M;
 [p, N] = size(M);
 
 if nargin == 1
+    sprintf('Implementing hyperHfcVd to determine the number of endmembers.\n')
     q = hyperHfcVd(M_orig, [10^-3]);
+    sprintf('Reducing dimensionality to (q-1) using hyperPct.\n')
     M = hyperPct(M, q-1);
 elseif q < p+1
-    M = hyperPct(M, q-1);
     warning('WarnTests:dim', ...
     strcat('N-FINDR requires (q-1) spectral bands.\n',...
            'Performing PCA to reduce dimensionality.\n'))
+    M = hyperPct(M, q-1);
 elseif q > p+1
     warning('WarnTests:dim', ...
     strcat('N-FINDR requires (q-1) spectral bands.\n',...
@@ -50,13 +52,13 @@ elseif q > p+1
 end
 
 % Initialize
-M     = M*1e4;
-U_idx = randperm(N,q);
-E     = M(:,U_idx);
-V     = abs(det([ones(1,q); E])) / factorial(q-1);
+M     = M*1e4;         % Scale reflectances to reduce numerical error
+U_idx = randperm(N,q); % Random endmember selection
+E     = M(:,U_idx);    % Endmember matrix
+V     = abs(det([ones(1,q); E])) / factorial(q-1); % Simplex volume
 vols  = zeros(q,1);
 
-% Search for maximum volume
+% Search for maximum volume simplex
 for j = 1:N;
     % Replace each column of E with sample vector M(:,j) 
     % and compute the volume for each

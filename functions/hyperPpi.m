@@ -12,9 +12,10 @@ function [U] = hyperPpi(M, q, numSkewers)
 %   U - Recovered endmembers (p x N)
 
 [p, N] = size(M);
+M_orig = M;
 
 % Remove data mean
-u = mean(M.').';
+u = mean(M,2);
 M = M - repmat(u, 1, N);
 
 % Generate skewers
@@ -29,6 +30,6 @@ for kk=1:numSkewers
 end
 
 [val, idx] = sort(votes, 'descend');
-U = M(:, idx(1:q));
+U = M_orig(:, idx(1:q));
 
 
