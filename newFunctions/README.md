@@ -10,5 +10,5 @@ These are some of the functions I am working on adding to the Toolbox. Depending
 * Random N-FINDR (RN-FINDR)
 
 ### Other ###
-* Demo file (guide) using these functions
+* ~~Demo file (guide) for using these functions~~
 * ~~Truecolor composite generation from RGB spectral bands~~
