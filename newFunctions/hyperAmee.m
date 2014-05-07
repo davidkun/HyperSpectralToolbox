@@ -1,21 +1,40 @@
-function [ U, X, n ] = hyperAmee( M, q, U_init )
-% HYPERAMEE Performs the AMEE algorithm
-%   Performs the  Automated Morphological Endmember Extraction (AMEE) 
-% algorithm; performs unsupervised pixel purity determination and 
-% endmember extraction. This function utilizes FastICA.
+function [U] = hyperAmee(M, q, Smin, Smax, L)
+% HYPERAMEE Performs the AMEE algorithm to find q endmembers
+%   Performs the Automated Morphological Endmember Extraction (AMEE) 
+%  algorithm to find q endmembers. If only M is
+%  given as input, this function calls hyperHfcVd to estimate the number
+%  of endmembers (q) and then hyperPct to reduce dimensionality to (q-1).
 %
 % Usage
-%   [ U, X, n ] = hyperAmee( M, q, U_init )
+%   [U] = hyperAmee(M, q, Smin)
+%   [U] = hyperAmee(M, q, Smin, Smax)
+%   [U] = hyperAmee(M, q, Smin, Smax, L)
 % Inputs
-%   M - HSI data in 2D (p x N)
-%   q - Number of materials to unmix
-%   U_init - Initia l endmembers (p x #)
+%   M - 3d matrix of HSI data (m x n x p)
+%   q - Number of endmembers to find
+%   Smin - minimum kernel size
+%   Smax - maximum kernel size
+%   L    - maximum iterations
 % Outputs
-%   U - matrix of recovered endmembers (p x q)
-%   X - material abundance maps (q x N)
-%   n - (optional) Indicies of recovered endmembers (q x 1)
-%
+%   U - Recovered endmembers (p x N)
+% 
 % References
-%   A. Plaza et al., "Spatial/spectral endmember extraction 
-% by multidimensional morphological operations." Geoscience
-% and Remote Sensing, IEEE Transactions on 40.9 (2002): 2025-2041.
+%   Plaza, Antonio, et al. "Spatial/spectral endmember extraction 
+% by multidimensional morphological operations." Geoscience and 
+% Remote Sensing, IEEE Transactions on 40.9 (2002): 2025-2041.
+
+% Error trapping
+if ndims(M) ~= 3
+    error('Input image must be (m x n x p)');
+else
+    [h, w, p] = size(M);
+end
+
+if nargin == 2
+    Smax = Smin;
+elseif nargin == 3
+    L = 5;
+end
+
+% Morphological Eccentricity Index Score (MEI)
+MEI = zeros(h,w);
