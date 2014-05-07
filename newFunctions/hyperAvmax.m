@@ -13,7 +13,7 @@ function [U] = hyperAvmax(M, q)
 %   q - Number of endmembers to find
 %       -- if not given, q is obtained from hyperHfcVd(M, 10^-3)
 % Outputs
-%   U - Recovered endmembers (p x N)
+%   U - Recovered endmembers (p x q)
 %
 % References
 %  T.H. Chan et al., "A simplex volume maximization framework 
