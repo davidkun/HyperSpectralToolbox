@@ -18,9 +18,9 @@ end
 
 %--------------------------------------------------------------------------
 % Record outputs (not including figures)
-% diary(sprintf('%s/log.txt',resultsDir))
-% dnt = fix(clock); % date and time
-% fprintf('%d/%d/%d  %d:%d:%d\n\n', dnt([2,3,1,4,5,6]))
+diary(sprintf('%s/log.txt',resultsDir))
+dnt = fix(clock); % date and time
+fprintf('%d/%d/%d  %d:%d:%d\n\n', dnt([2,3,1,4,5,6]))
 
 fprintf('  Reading data from %s \n  in the directory %s.\n', rflFile, dataDir);
 fprintf('  Storing results in %s directory.\n', resultsDir);
@@ -155,6 +155,21 @@ l = legend(cellstr(num2str((1:q)'))', 'Location', 'EastOutside');
 a = get(l, 'children'); set(a(1:3:end), 'MarkerSize', 20);
 print(gcf, '-r600', '-depsc', sprintf('%s/endmmbrs-avmax', resultsDir));
 
+%% AMEE
+fprintf('Performing AMEE for endmember determination...\n'); tic;
+Uamee = hyperAmee(M, q, 5);
+et=toc; fprintf('...Done. (~%1.3g seconds)\n',et);
+
+% Plot endmember signatures
+figure; plot(lambdasNm, Uamee, '.'); grid on; ylim([0,1]);
+title('AMEE Recovered Endmembers', 'Interpreter', 'Latex', 'FontSize', 14);
+ax(1) = ylabel('Reflectance [0-1]'); 
+ax(2) = xlabel('Wavelength [nm]');
+set(ax, 'Interpreter', 'Latex', 'FontSize', 12);
+l = legend(cellstr(num2str((1:q)'))', 'Location', 'EastOutside');
+a = get(l, 'children'); set(a(1:3:end), 'MarkerSize', 20);
+print(gcf, '-r600', '-depsc', sprintf('%s/endmmbrs-amee', resultsDir));
+
 %% --------------------------------------------------------------------------
 % Create abundance maps from unmixed endmembers
 %% From PPI results:
@@ -199,6 +214,21 @@ for i=1:q
     clf; imagesc(abundanceMaps(:,:,i)); colorbar; axis image; 
     title(sprintf('Abundance Map %d/%d', i, q), 'Interpreter', 'Latex');
     print(gcf, '-depsc', '-r600', sprintf('%s/abund-avmax-%d', resultsDir, i))
+end
+close(gcf); fprintf('...Done.\n');
+
+%% From AMEE results:
+fprintf('Creating abundance maps from AMEE endmember results...\n'); tic;
+abundanceMaps = hyperNnls(M2d, Uamee);
+abundanceMaps = hyperConvert3d(abundanceMaps, h, w, q);
+et=toc; fprintf('...Done. (~%1.3g seconds)\n',et);
+
+fprintf('Plotting and saving AMEE abundance maps...\n');
+for i=1:q
+    if i==1; figure; end;
+    clf; imagesc(abundanceMaps(:,:,i)); colorbar; axis image; 
+    title(sprintf('Abundance Map %d/%d', i, q), 'Interpreter', 'Latex');
+    print(gcf, '-depsc', '-r600', sprintf('%s/abund-amee-%d', resultsDir, i))
 end
 close(gcf); fprintf('...Done.\n');
 
