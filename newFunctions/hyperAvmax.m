@@ -100,7 +100,7 @@ if zeta == maxitr
     ' Iterations: %d \n'], ...
      tol, abs(rho_bar-rho)/rho, zeta)
 else
-    sprintf('Total iterations: %d', zeta)
+    fprintf('Total iterations: %d', zeta)
 end
 
 % Return endmembers
