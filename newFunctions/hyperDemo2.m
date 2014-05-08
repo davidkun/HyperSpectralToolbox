@@ -232,5 +232,10 @@ for i=1:q
 end
 close(gcf); fprintf('...Done.\n');
 
-%% End log file
-diary off
+%% Save data and end log file
+saveDataFile = 'dataOutput';
+fprintf('\nSaving endmemebers (from each method) to %s.mat...\n', saveDataFile);
+save([resultsDir,filesep,saveDataFile], 'lambdasNm', ...
+      'Uppi', 'Unfindr', 'Uavmax', 'Uamee');
+fprintf('...Done.\n');
+diary off; close all
