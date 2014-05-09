@@ -81,7 +81,7 @@ set(ax, 'Interpreter', 'Latex', 'FontSize', 12);
 fprintf('Removing low SNR bands...\n');
 % [rows,cols,vals]=find(sum(M2d,2)==0);
 % goodBands = [4:104 116:149 171:224];
-goodBands = [4:104 116:135 137:149 172:224];
+goodBands = [4:104 116:135 137:149 174:224];
 M2d       = M2d(goodBands, :);
 p         = length(goodBands);
 lambdasNm = desiredLambdasNm(goodBands);
