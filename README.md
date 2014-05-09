@@ -33,7 +33,7 @@ Add the following code to it (make sure to modify `path-to-directory` so it matc
 You're ready to go now! Check out the demo files `hyperDemo.m` in `functions/` and `hyperDemo2.m` in `newFunctions/` to learn how to use the toolbox, or see the examples further down this page.
 
 ***
-[Back to top](https://github.com/davidkun/HyperSpectralToolbox#hyperspectral-matlab-toolbox)  
+[Back to top](https://github.com/davidkun/HyperSpectralToolbox#welcome-to-my-project)  
 ***
 
 ## Description ##
@@ -67,7 +67,7 @@ The open source Matlab Hyperspectral Toolbox is a Matlab toolbox containing vari
 **Reading / writing files** (.rfl, .asd, ect)
 
 ***
-[Back to top](https://github.com/davidkun/HyperSpectralToolbox#hyperspectral-matlab-toolbox)  
+[Back to top](https://github.com/davidkun/HyperSpectralToolbox#welcome-to-my-project)  
 ***
 
 ## Examples ##
@@ -115,7 +115,7 @@ _Figure 5: Abundance map from first N-FINDR-recovered endmember_
 These are just a few features of the Hyperspectral Toolbox.
 
 ***
-[Back to top](https://github.com/davidkun/HyperSpectralToolbox#hyperspectral-matlab-toolbox)  
+[Back to top](https://github.com/davidkun/HyperSpectralToolbox#welcome-to-my-project)  
 ***
 
 ### Algorithms to be added (requested by Dr. Gerg): ###
@@ -135,5 +135,5 @@ Variations on ACE - e.g. adaptive covariance estimated ACE, etc
 
 
 ***
-[Back to top](https://github.com/davidkun/HyperSpectralToolbox#hyperspectral-matlab-toolbox)  
+[Back to top](https://github.com/davidkun/HyperSpectralToolbox#welcome-to-my-project)  
 ***
