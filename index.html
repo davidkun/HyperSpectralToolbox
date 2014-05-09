@@ -100,7 +100,7 @@ edit startup.m      % may ask if you'd like to create it; click Yes
 figure; imagesc(slice); axis image; colormap(gray);
 </code></pre>
 
-<p><img src="https://raw.githubusercontent.com/davidkun/HyperSpectralToolbox/master/figures/sampleSlice.png" alt="Figure 1: 1997 AVIRIS flight over Cuprite, NV"></p>
+<p><img src="https://raw.githubusercontent.com/davidkun/HyperSpectralToolbox/master/figures/sampleSlice.png" alt="Figure 1: 1997 AVIRIS flight over Cuprite, NV"><br><em>Figure 1: 1997 AVIRIS flight over Cuprite, NV</em></p>
 
 <p>View an enhanced truecolor composite of the HSI:</p>
 
@@ -108,11 +108,11 @@ figure; imagesc(slice); axis image; colormap(gray);
 figure; imagesc(tColor); axis image
 </code></pre>
 
-<p><img src="https://raw.githubusercontent.com/davidkun/HyperSpectralToolbox/master/figures/truecolor.png" alt="Figure 2: Truecolor composite from RGB bands"></p>
+<p><img src="https://raw.githubusercontent.com/davidkun/HyperSpectralToolbox/master/figures/truecolor.png" alt="Figure 2: Truecolor composite from RGB bands"><br><em>Figure 2: Truecolor composite from RGB bands</em></p>
 
 <p>Plot the spectral signatures of 20 random pixels in order to determine which bands are greatly affected by water absorption and/or have a low signal-to-noise ratio (SNR):</p>
 
-<p><img src="https://raw.githubusercontent.com/davidkun/HyperSpectralToolbox/master/figures/targets_spectra.png" alt="Figure 3: Pre-processing: removal of poor spectral bands from original HSI"></p>
+<p><img src="https://raw.githubusercontent.com/davidkun/HyperSpectralToolbox/master/figures/targets_spectra.png" alt="Figure 3: Pre-processing: removal of poor spectral bands from original HSI"><br><em>Figure 3: Pre-processing: removal of poor spectral bands from original HSI</em></p>
 
 <p>Using the resampled HSI cube, perform an endmember extraction algorithm, for example, the N-FINDR algorithm:</p>
 
@@ -120,7 +120,7 @@ figure; imagesc(tColor); axis image
 figure; plot(lambdasNm, Unfindr, '.'); grid on;
 </code></pre>
 
-<p><img src="https://raw.githubusercontent.com/davidkun/HyperSpectralToolbox/master/figures/endmmbrs-nfindr.png" alt="Figure 4: Endmember signatures estimated by PPI"></p>
+<p><img src="https://raw.githubusercontent.com/davidkun/HyperSpectralToolbox/master/figures/endmmbrs-nfindr.png" alt="Figure 4: Endmember signatures estimated by PPI"><br><em>Figure 4: Endmember signatures estimated by PPI</em></p>
 
 <p>Generate abundance maps using the non-negative constrained least squares method for each extracted endmember signature, for example:</p>
 
@@ -129,7 +129,7 @@ abundanceMaps = hyperConvert3d(abundanceMaps, h, w, q);
 figure; imagesc(abundanceMaps(:,:,1)); colorbar; axis image; 
 </code></pre>
 
-<p><img src="https://raw.githubusercontent.com/davidkun/HyperSpectralToolbox/master/figures/abund-nfindr-1.png" alt="Figure 5: Abundance map from first N-FINDR-recovered endmember"></p>
+<p><img src="https://raw.githubusercontent.com/davidkun/HyperSpectralToolbox/master/figures/abund-nfindr-1.png" alt="Figure 5: Abundance map from first N-FINDR-recovered endmember"><br><em>Figure 5: Abundance map from first N-FINDR-recovered endmember</em></p>
 
 <p>These are just a few features of the Hyperspectral Toolbox.</p>
 
