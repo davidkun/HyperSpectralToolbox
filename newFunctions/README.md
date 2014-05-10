@@ -4,7 +4,7 @@ These are some of the functions I am working on adding to the Toolbox. Depending
 
 ### Endmember Determination (Extraction) Algorithms ###
 
-* Automated Morphological Endmember Extraction (AMEE)
+* ~~Automated Morphological Endmember Extraction (AMEE)~~
 * ~~Alternating Volume Maximization (AVMAX)~~
 * ~~N-FINDR~~
 * Random N-FINDR (RN-FINDR)
