@@ -24,8 +24,11 @@ Rinv = inv(R_hat);
 
 tmp = target'*Rinv*target;
 
-results = zeros(1, N);
-for k=1:N
-    % Equation 6
-    results(k) = (target'*Rinv*M(:,k)) / tmp;    
-end
+% Equation 6
+results = target'*Rinv*M / tmp;
+
+% Shouldn't this actually be like this?
+% Equation 6 : results = inv( target'*inv(R)*target ) * inv(R)*target
+% 
+% invRtarget = R_hat\target; % inv(R)*target
+% results    = ( target'*invRtarget ) \ invRtarget;
