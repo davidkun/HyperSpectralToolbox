@@ -16,19 +16,23 @@ function [results] = hyperCem(M, target)
 % Orthogonal Subspace Projection and Constrained Energy Minimization.  
 % IEEE TGRS. Volume 41. Number 6. June 2003.
 
-[p, N] = size(M);
+% Check dimensions
+if ndims(M) ~= 2
+    error('Input image must be p x N.');
+end
+
+p = size(M,1);
+
+if ~isequal(size(target), [p,1])
+    error('Input target must be p x 1.');
+end
+
 % CEM uses the correlation matrix, NOT the covariance matrix. Therefore,
 % don't remove the mean from the data.
 R_hat = hyperCorr(M);
-Rinv = inv(R_hat);
 
-tmp = target'*Rinv*target;
+% Equation 6 : w = inv( target'*inv(R)*target ) * inv(R)*target
+invRtarget = R_hat\target; % inv(R)*target
+weights    = ( target'*invRtarget ) \ invRtarget;
 
-% Equation 6
-results = target'*Rinv*M / tmp;
-
-% Shouldn't this actually be like this?
-% Equation 6 : results = inv( target'*inv(R)*target ) * inv(R)*target
-% 
-% invRtarget = R_hat\target; % inv(R)*target
-% results    = ( target'*invRtarget ) \ invRtarget;
+results    = weights'*M;
