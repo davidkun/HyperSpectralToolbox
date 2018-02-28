@@ -20,16 +20,17 @@ function [M_pct, V, lambda] = hyperPct(M, q)
 % Remove the data mean
 u = mean(M.').';
 %M = M - repmat(u, 1, N);
+M_orig=M;
 M = M - (u*ones(1,N));
 
 % Compute covariance matrix
-C = (M*M.')/N;
+C = (M*M.')/(N-1);
 
 % Find eigenvalues of covariance matrix
 [V, D] = eigs(C, q);
 
 % Transform data
-M_pct = V'*M;
+M_pct = V'*M_orig;
 
 lambda = diag(D);
 
