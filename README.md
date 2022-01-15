@@ -1,13 +1,19 @@
-### Welcome to my Project ###
+### HyperSpectral Toolbox ###
 
 For better viewing, visit <http://davidkun.github.io/HyperSpectralToolbox/>  
 
-Originally created by [Isaac Gerg](http://www.gergltd.com/home/)  
-Under GNU General Public License version 2.0 (GPLv2).  
-[Visit SourceForge](http://sourceforge.net/apps/mediawiki/matlabhyperspec/index.php?title=Main_Page)
+Originally created by [Isaac Gerg](http://www.gergltd.com/home/) and maintained by him [here](https://github.com/isaacgerg/matlabHyperspectralToolbox).
+
+# Note #
+
+**This repository is no longer being maintained or updated.** 
+
+Isaac (the original creator of 99% of this work) has [his own GitHub repository](https://github.com/isaacgerg/matlabHyperspectralToolbox) with this work and intends to actively maintain / update it there.
+
+_Please use that repository and see his BibTeX citation for correctly referencing the software in your research._
 
 **Dependencies**  
-FastICA ([from my Github repo](https://github.com/davidkun/FastICA) or [from Aalto University](http://research.ics.aalto.fi/ica/fastica/code/dlcode.shtml))
+FastICA -- [from Aalto University](http://research.ics.aalto.fi/ica/fastica/code/dlcode.shtml))
 
 ## Setup ##
 
