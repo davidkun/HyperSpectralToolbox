@@ -46,31 +46,31 @@ You're ready to go now! Check out the demo files `hyperDemo.m` in `functions/` a
 
 The open source Matlab Hyperspectral Toolbox is a Matlab toolbox containing various hyperspectral exploitation algorithms. The toolbox is meant to be a concise repository of current state-of-the-art exploitation algorithms for learning and research purposes. The toolbox includes functions for:
 
-**Target detection**  
--Constrained Energy Minimization (CEM)  
--Orthogonal Subspace Projection (OSP)  
--Generalized Likelihood Ratio Test (GLRT)  
--Adaptive Cosine/Coherent Estimator (ACE)  
--Adaptive Matched Subspace Detector (AMSD)  
-**Endmember Finders**  
--Automatic Target Generation Procedure (ATGP)  
--Independent component analysis - endmember extraction algorithm (ICA-EEA)  
-**Material abundance map (MAM) generation**  
-**Spectral Comparison**  
--Spectral angle mapper (SAM)  
--Spectral information divergence (SID)  
--Normalize cross correlation  
-**Anomaly Detectors**  
--Reed-Xiaoli Detector (RX)  
-**Least Square Solvers** (for abundance map estimation)  
--Fully-constrained least squares (FCLS)  
--Non negative least squares (NNLS)  
-**Material Count Estimation**  
--HFC virtual dimensionality (VD) for material count estimate  
-**Automated processing**  
-**Change detection**  
-**Visualization**  
-**Reading / writing files** (.rfl, .asd, ect)
+* **Target detection**  
+  * Constrained Energy Minimization (CEM)  
+  * Orthogonal Subspace Projection (OSP)  
+  * Generalized Likelihood Ratio Test (GLRT)  
+  * Adaptive Cosine/Coherent Estimator (ACE)  
+  * Adaptive Matched Subspace Detector (AMSD)  
+* **Endmember Finders**  
+  * Automatic Target Generation Procedure (ATGP)  
+  * Independent component analysis - endmember extraction algorithm (ICA-EEA)  
+* **Material abundance map (MAM) generation**  
+* **Spectral Comparison**  
+  * Spectral angle mapper (SAM)  
+  * Spectral information divergence (SID)  
+  * Normalize cross correlation  
+* **Anomaly Detectors**  
+  * Reed-Xiaoli Detector (RX)
+* **Least Square Solvers** (for abundance map estimation)  
+  * Fully-constrained least squares (FCLS)  
+  * Non negative least squares (NNLS)
+* **Material Count Estimation**
+  * HFC virtual dimensionality (VD) for material count estimate  
+* **Automated processing**
+* **Change detection**
+* **Visualization**  
+* **Reading / writing files** (.rfl, .asd, ect)
 
 ***
 [Back to top](https://github.com/davidkun/HyperSpectralToolbox#welcome-to-my-project)  
